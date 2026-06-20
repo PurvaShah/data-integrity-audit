@@ -10,7 +10,8 @@ Three raw tables: users, subscriptions, events
 
 Five SQL scripts to clean and validate the data
 
-What Each SQL File Does
+## What Each SQL File Does
+
 ## 1️⃣ 01_duplicate_detection.sql
 Identifies duplicate event rows using ROW_NUMBER()
 
