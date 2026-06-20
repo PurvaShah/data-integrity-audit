@@ -4,15 +4,14 @@ This report summarizes the data quality issues identified in the raw SaaS event 
 
 The goal was to ensure accurate downstream analytics for MRR, churn, and product usage.
 
-1. Data Issues Identified (Before Cleaning)
+# 1. Data Issues Identified (Before Cleaning)
+
 1.1 Duplicate Events
 Count: 1
-
 Duplicate event rows inflated usage metrics and could lead to double‑counting logins or purchases.
 
 1.2 Orphaned Records
 Orphaned events: 1
-
 Orphaned subscriptions: 1
 
 These records referenced user_id values that did not exist in the users table.
@@ -29,7 +28,7 @@ NULL country values: 1
 
 Prevented accurate geographic segmentation.
 
-2. Cleaning Actions Performed
+# 2. Cleaning Actions Performed
 2.1 Duplicate Removal
 Used ROW_NUMBER() + QUALIFY to retain only the first occurrence.
 
@@ -51,7 +50,7 @@ Converted all country codes to uppercase
 
 Excluded rows where country was NULL
 
-3. Before Cleaning
+# Before Cleaning
 | Issue | Count |
 | --- | --- |
 | Duplicate events | 1 |
@@ -60,7 +59,7 @@ Excluded rows where country was NULL
 | Null timestamps | 1 |
 | Inconsistent country codes | 2 |
 
-4. After Cleaning
+# After Cleaning
 | Issue | Count |
 | --- | --- |
 | Duplicate events | 0 |
@@ -69,7 +68,8 @@ Excluded rows where country was NULL
 | Null timestamps | 0 |
 | Country codes standardized | 100% |
 
-5. Business Impact
+Business Impact :
+
 Eliminated double‑counting of user activity
 Ensured accurate MRR attribution
 Improved data reliability for finance and product teams
