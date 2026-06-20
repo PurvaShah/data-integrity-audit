@@ -1,0 +1,5 @@
+﻿subscription_id,user_id,plan,start_date,end_date
+5001,101,Pro,2023‑01‑05,NULL
+5002,102,Basic,2023‑02‑10,2023‑05‑10
+5003,999,Pro,2023‑03‑01,NULL,← orphaned user
+5004,103,Pro,2023‑02‑15,NULL
