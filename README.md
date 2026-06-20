@@ -1,9 +1,8 @@
 # PROJECT OVERVIEW 
-A subscription‑based SaaS company is experiencing silent data corruption in its event logs.
-Finance reports are incorrect because:
-duplicate events inflate usage
-timezone inconsistencies distort billing cycles
-orphaned user IDs break revenue attribution
-missing values cause incomplete reporting
+his project simulates a real‑world data engineering scenario where a SaaS company experiences silent data corruption in its event logs.
+The goal is to audit, clean, and validate the data using SQL, ensuring accurate downstream analytics for MRR, churn, and product usage.
 
-Task: Audit, clean, and validate the data using SQL, then produce a clean table + a data health report.
+The project uses:
+BigQuery SQL
+Three raw tables: users, subscriptions, events
+Five SQL scripts to clean and validate the data
